@@ -1,4 +1,8 @@
-node_modules
+node_modules/
+!node_modules/ep_user_pad/
+!node_modules/ep_user_pad_frontend/
+node_modules/ep_user_pad_frontend/temp_*
+etherpad-rrze
 settings.json
 !settings.json.template
 APIKEY.txt

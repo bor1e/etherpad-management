@@ -3,7 +3,9 @@
 
 ## Etherpad
 Es wird die Version 1.5.7 verwendet. (Aktuellste Version von etherpad-lite)
+
 Anleitung der Installation unter [Etherpad-Lite](www.github.com/ether/etherpad-lite)
+
 `settings.json.template` verwenden um interne Einstellung (Anbindung an port, Datenbank, etc) zu verwenden, anschließend als `settings.json` abspeichern.
 
 MySQL-Beispiel:

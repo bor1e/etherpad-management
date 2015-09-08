@@ -8,17 +8,17 @@ Anleitung der Installation unter [Etherpad-Lite](www.github.com/ether/etherpad-l
 
 `settings.json` für interne Einstellungen des Servers (Anbindung an port, Datenbank, etc) zu verwenden, als Beispiel Vorlage dient `settings.json.template`.
 
-MySQL-Beispiel (in `settings.json`):
+Es wurde der MySQL Server des RRZE verwendet (in `settings.json`):
 
 ` "dbType" : "mysql",
   "dbSettings" : {
                     "user"    : "etherpad",
-                    "host"    : "localhost",
-                    "port"    : "/var/run/mysqld/mysqld.sock",
-                    "password": "your-password-for-db",
-                    "database": "etherpad-lite"
+                    "host"    : "mysqlrz.db.fau.de",
+                    "port"    : 3306,
+                    "password": "our-password-for-db",
+                    "database": "etherpad_prod"
                   },
-`
+`Sollte man alte/bereits existierende Pads exportieren/integrieren wollen, muss man sich zuerst einen MySQL-dump erstellen, und diesen in die zuintegrierende Datenbank einfügen [mehr dazu](https://github.com/ether/etherpad-lite/wiki/Backing-up-and-Restoring-Etherpad-Lite-Pads). 
 
 ## Benutzeroberfläche
 Es wurde `ep_user_pad` und `ep_user_pad_frontend` als [Web-Frontend](https://github.com/aoberegg/ep_user_pad_frontend/) verwendet.
@@ -26,8 +26,7 @@ Installation kann entweder über das etherpad-admin tool oder direkt über den L
 Bei der Datenbank ist die 'uid' Spalte hinzuzufügen:
 
 `
-mysql -u root -p
-use 'etherpad-lite'
+use 'etherpad_prod'
 ALTER TABLE User ADD uid varchar(32) NOT NULL;
 ALTER TABLE USER ADD UNIQUE (uid);
 `

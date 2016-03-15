@@ -735,12 +735,14 @@ var paduserlist = (function()
     },
     renderMyUserInfo: function()
     {
+//      myUserInfo.name = $("#myusernameedit").attr('placeholder');
       if (myUserInfo.name)
       {
         $("#myusernameedit").removeClass("editempty").val(myUserInfo.name);
       }
       else
       {
+        //$("#myusernameedit").removeClass("editempty").val(_("pad.userlist.entername"),"test");
         $("#myusernameedit").addClass("editempty").val(_("pad.userlist.entername"));
       }
       if (colorPickerOpen)

@@ -94,7 +94,7 @@ exports.padOptions = {
   "showChat": true,
   "showLineNumbers": true,
   "useMonospaceFont": false,
-  "userName": false,
+  "userName": true,
   "userColor": false,
   "rtl": false,
   "alwaysShowChat": false,

@@ -1,0 +1,3 @@
+info:    Forever restarted processes:
+data:        uid  command         script                                       forever pid   id logfile                         uptime        
+data:    [0] 72sG /usr/bin/nodejs node_modules/ep_etherpad-lite/node/server.js 12352   18671    /opt/etherpad/.forever/72sG.log 0:4:37:46.416 
